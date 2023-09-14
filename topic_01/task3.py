@@ -1,6 +1,4 @@
 import math
-
-
 def findD(a, b, c):
     D = b**2 - 4*a*c
     return D
