@@ -39,8 +39,6 @@ while True:
         result = multiply(a, b)
     elif operation == '/':
         result = divide(a, b)
-    elif operation == ']':
-        print(' ')
     else:
         print("Invalid operation")
         continue
