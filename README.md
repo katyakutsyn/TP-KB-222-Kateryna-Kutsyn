@@ -6,4 +6,8 @@ add solution for task1 task2 and task3
 add folder topic_02
 add solution for task1 task2 and task3
 
+# 2023-10-02
+add folder topic_03
+add solution for task1 task2 task3 & task4
+
 # TP-KB-222-Kateryna-Kutsyn
