@@ -1,4 +1,4 @@
-my_list = ["w", "h", "r"]
+my_list = ["h", "r", "w"]
 
 while True:
     new_value = input("New value (or 'Q' to exit): ")
