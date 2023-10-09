@@ -1,6 +1,4 @@
 
-
-
 import sys
 
 def add(a, b):
