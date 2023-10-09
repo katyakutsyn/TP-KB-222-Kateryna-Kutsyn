@@ -1,21 +1,24 @@
-import sys
-
-def add(a, b):
+def addition(a, b):
     return a + b
 
-def subtract(a, b):
+def subtraction(a, b):
     return a - b
 
-def multiply(a, b):
+def multiplication(a, b):
     return a * b
 
-def divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError :
-        print("ZeroDivisionError occurs")
-        return None
+def division(a, b):
+    if b == 0:
+        raise ValueError("ZeroDivisionError occurs")
+    return a / b
 
+def get_number(prompt):
+    while True:
+        try:
+            x = float(input(prompt))
+            return x
+        except ValueError:
+            print("Invalid input, please try again.")
 
 while True:
     print("Choose operation:")
@@ -24,35 +27,29 @@ while True:
     print("3. Multiply = '*' ")
     print("4. Divide = '/' ")
     print("5. Exit = 'Q'")
-
-    operation = input('Enter operation sign: ')
-
-    if operation == "Q":
-        print("Goodbye")
+    
+    choice = input("Enter operation sign:: ")
+    
+    if choice == "Q" :
+        print("goodbye")
         break
+    
+    if choice in ('+', '-', '*', '/'):
+        
+        first_number = get_number("Enter the first number: ")
+        second_number = get_number("Enter the second number: ")
 
-    try:
-        a = float(input("Enter the first number: "))
-        b = float(input("Enter the second number: "))
+        try:
+            if choice == '+':
+                result = addition(first_number, second_number)
+            elif choice == '-':
+                result = subtraction(first_number, second_number)
+            elif choice == '*':
+                result = multiplication(first_number, second_number)
+            elif choice == '/':
+                result = division(first_number, second_number)
 
-        result = None
-
-        if operation == '+':
-            result = add(a, b)
-        elif operation == '-':
-            result = subtract(a, b)
-        elif operation == '*':
-            result = multiply(a, b)
-        elif operation == '/':
-            result = divide(a, b)
-        else:
-            print("Invalid operation")
-            continue
-
-        if result is not None:
             print("Result:", result)
-
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
-
+        except ValueError as e:
+            print("Error:", e)
 
