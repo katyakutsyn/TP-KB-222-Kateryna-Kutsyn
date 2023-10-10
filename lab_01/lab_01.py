@@ -1,4 +1,5 @@
 
+
 student_list = [
     {"name": "Bob", "phone": "0631234567", "email": "bob@example.com", "group": "A"},
     {"name": "Emma", "phone": "0631234567", "email": "emma@example.com", "group": "B"},
@@ -47,32 +48,28 @@ def delete_student():
 def edit_student():
     name_to_edit = input("Please enter the name of the student to edit: ")
 
-   
+
     for student in student_list:
         if student["name"] == name_to_edit:
             print(f"Editing student: {student['name']}")
-            
-            new_name = input("Enter new name: ")
-            
-            
-            
-            student_list.remove(student)
+      
+            new_name = input(f"Enter new name ({student['name']}): ")
+            new_phone = input(f"Enter new phone ({student['phone']}): ")
+            new_email = input(f"Enter new email ({student['email']}): ")
+            new_group = input(f"Enter new group ({student['group']}): ")
            
             student["name"] = new_name
-           
-           
-            insert_position = 0
-            for existing_student in student_list:
-                if new_name > existing_student["name"]:
-                    insert_position += 1
-                else:
-                    break
-            student_list.insert(insert_position, student)
-           
-            print(f"Student '{name_to_edit}' has been updated with new name: {new_name}")
+            student["phone"] = new_phone
+            student["email"] = new_email
+            student["group"] = new_group
+            print(f"Student '{name_to_edit}' has been updated")
+            
+ 
+            student_list.sort(key=lambda x: x['name'])
+            print("Student list has been sorted by name.")
             return
 
-   
+
     print(f"Student '{name_to_edit}' not found")
 
 def main():
@@ -94,10 +91,11 @@ def main():
             print("Printing the student list:")
             print_all_students()
         elif choice.upper() == "Q":
-            print("Dosvidos")
+            print("Dosviduli")
             break
         else:
             print("Invalid choice")
 
 if __name__ == "__main__":
     main()
+
