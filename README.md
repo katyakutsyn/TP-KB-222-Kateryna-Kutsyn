@@ -16,6 +16,6 @@ add solution for task1 task2
 
 #2023-10-16
 add folder topic_05
-add solutins for task1 task2 and task3 (functions.py calc.py operations.py)
+add solutins for task1 task2 and task3 functions.py calc.py operations.py
 
 # TP-KB-222-Kateryna-Kutsyn
