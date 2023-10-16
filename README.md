@@ -14,8 +14,8 @@ add solution for task1 task2 task3 & task4
 add folder topic_044
 add solution for task1 task2 
 
-#2023-10-16
 
+#2023-10-16
 add folder topic_05
 add solutins for task1 task2 and task3 functions.py calc.py operations.py
 
