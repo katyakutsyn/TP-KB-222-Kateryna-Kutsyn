@@ -64,8 +64,6 @@ def edit_student():
             student["group"] = new_group
             print(f"Student '{name_to_edit}' has been updated")
 
-
-
             student_list.sort(key=lambda x: x['name'])
             print("Student list has been sorted by name.")
             return
