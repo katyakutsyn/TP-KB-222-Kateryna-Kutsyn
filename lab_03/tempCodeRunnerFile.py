@@ -1,0 +1,1 @@
+student = Student(row["name"], row["phone"], row["age"], row["email"])
